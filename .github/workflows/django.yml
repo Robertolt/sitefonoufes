@@ -32,4 +32,4 @@ jobs:
         pipenv install --dev
         pipenv run flake8
       # python manage.py test
-    
+      # pipenv run python -m pytest
