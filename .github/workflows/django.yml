@@ -21,14 +21,12 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install Dependencies
-      run: |
-        pipenv shell
-        pipenv sync
-        pipenv install
-        pipenv install -d
+    - name: Install pipenv
+      run: pip install pipenv
+
     - name: Run Tests
       run: |
+        pipenv install --dev
+        pipenv run flake8
         python manage.py test
-    - name: Flake8
-      run: pip run .flake8
+    
