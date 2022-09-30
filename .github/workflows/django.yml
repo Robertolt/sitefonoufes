@@ -24,7 +24,7 @@ jobs:
     - name: Install pipenv
       run: |
         pip install pipenv
-        pipenv shell
+     #  pipenv shell
      #  pipenv sync
 
     - name: Run Tests
