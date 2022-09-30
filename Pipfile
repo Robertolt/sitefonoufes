@@ -4,6 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+django = "*"
+flake8 = "*"
 
 [dev-packages]
 flake8 = "*"
